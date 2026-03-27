@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+    <input type="text" value="92" id="jmass">
+    <input type="text" value="1.95" id="jheight"> John<br><br>
+
+    <input type="text" value="78" id="mmass">
+    <input type="text" value="1.69" id="mheight"> Mark<br><br>
+
+    <button id="btnCalculate">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("btnCalculate").onclick = function () {
+            var johnMass = Number(document.getElementById("jmass").value);
+            var johnHeight = Number(document.getElementById("jheight").value);
+            var markMass = Number(document.getElementById("mmass").value);
+            var markHeight = Number(document.getElementById("mheight").value);
+
+            var johnBMI = johnMass / (johnHeight * johnHeight);
+            var markBMI = markMass / (markHeight * markHeight);
+
+            if (markBMI > johnBMI) {
+                document.getElementById("result").innerText =
+                    "Mark có BMI cao hơn John (" + markBMI.toFixed(2) + " vs " + johnBMI.toFixed(2) + ")";
+            } else {
+                document.getElementById("result").innerText =
+                    "John có BMI cao hơn Mark (" + johnBMI.toFixed(2) + " vs " + markBMI.toFixed(2) + ")";
+            }
+        };
+        
+    </script>
+</body>
+</html>

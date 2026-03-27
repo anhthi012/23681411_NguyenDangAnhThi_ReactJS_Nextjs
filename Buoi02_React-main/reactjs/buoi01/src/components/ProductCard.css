@@ -1,0 +1,21 @@
+.product-card {
+    width: 200px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.price {
+    color: #e11d48;
+    font-weight: bold;
+}
